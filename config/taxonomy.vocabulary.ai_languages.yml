@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: AI Languages
+vid: ai_languages
+description: 'Defines languages you want AI to translate to.'
+weight: 0
+new_revision: false

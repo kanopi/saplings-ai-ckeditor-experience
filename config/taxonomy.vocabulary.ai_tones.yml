@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: AI Tones
+vid: ai_tones
+description: 'Defines tones that help sculpt the AI written content.'
+weight: 0
+new_revision: false
