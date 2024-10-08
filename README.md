@@ -5,7 +5,8 @@
 Helpful AI functionality for content creators.
 
 ## Features
-- Generation of content from AI using optional style and tones.
+- Generation of content using AI.
+- Alteration of content in specific tones using AI.
 - Translation of content using user determined languages using AI.
 - Summary of selected text using AI.
 
@@ -27,4 +28,61 @@ OpenAI.
 2. Create a key file at `private://keys/openai_provider.key`. That is usually at
    `[webroot]/sites/default/files/private/keys/openai_provider.key`.
 3. Once you are ready to deploy, be sure to place that key in your cloud
-environments.
+environments on the site's host. If you place it in the canonical environment,
+it will get cloned on subsequent multidev clones.
+
+## Usage
+
+To use the configured AI tools, start by clicking the *AI Assistant* button in any
+Full HTML CKEditor instance.
+
+### Generate with AI
+
+When you click the AI Assistant button > Generate with AI option, a modal pops
+up presenting:
+
+- What would you like to ask or get ideas for?
+
+Enter your prompt to AI to help you write your content.
+Example: Write three paragraphs about Kanopi Studio's Saplings suite of Recipes.
+
+- After you have written your prompt, click the *Generate* button. You can click
+  the button multiple times to get different responses from the AI source.
+
+- After you click the button, below the *Response from AI* field, you will see
+  the *AI Writer: Idle* message switch to *AI Writer: Waiting for response*.
+  Once the AI action has completed, it will switch back to Idle.
+
+- The response is saved in the *Response from AI* field. You can edit the
+  response before saving it back to the main editor.
+
+- When you are satisfied with the content, click the *Save changes to editor*
+  button.
+
+- Be sure to click *Save* on your node/page to ensure your changes are saved.
+
+### Summarize with AI
+
+- Select text in CKEditor
+- Click the AI Assistant button, then select *Summarize with AI*
+
+- After you click the button, below the *Response from AI* field, you will see
+  the *AI Writer: Idle* message switch to *AI Writer: Waiting for response*.
+  Once the AI action has completed, it will switch back to Idle.
+
+- The response is saved in the *Response from AI* field. You can edit the
+  response before saving it back to the main editor.
+
+- When you are satisfied with the content, click the *Save changes to editor*
+  button.
+
+- Be sure to click *Save* on your node/page to ensure your changes are saved.
+
+### Tone
+
+@TODO
+
+### Translate
+
+@TODO
+
