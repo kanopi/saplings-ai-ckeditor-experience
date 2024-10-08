@@ -6,7 +6,8 @@ Helpful AI functionality for content creators.
 
 ## Features
 - Generation of content from AI using optional style and tones.
-- Translation of content using user determined languages.
+- Translation of content using user determined languages using AI.
+- Summary of selected text using AI.
 
 Includes `AI Tones` and `AI Languages` taxonomies.
 
@@ -19,11 +20,11 @@ cd web && php core/scripts/drupal recipe ../recipes/saplings-ai-ckeditor-experie
 
 ### Configure OpenAI
 
-While the AI module supports many AI services, here are the steps to configure
-OpenAI for example.
+While the AI module supports many AI services, this recipe is configure to use
+OpenAI.
 
-Create an account and a User API key at https://platform.openai.com
-
-@TODO How to configure.
-
-Save, and you are ready to start AI-ing!
+1. Create an API key at https://platform.openai.com
+2. Create a key file at `private://keys/openai_provider.key`. That is usually at
+   `[webroot]/sites/default/files/private/keys/openai_provider.key`.
+3. Once you are ready to deploy, be sure to place that key in your cloud
+environments.
