@@ -1,8 +1,10 @@
 name: 'Saplings - AI CKEditor Experience'
 description: 'Configures CKEditor for AI translation and content generation.'
 type: Editor
-recipes:
-  - core/recipes/full_html_format_editor
+# Uncomment when leniency is added to this core recipe.
+# Currently it fails if the editor has changed at all from the core recipe.
+# recipes:
+#   - core/recipes/full_html_format_editor
 install:
   # Core.
   - ckeditor5
@@ -14,3 +16,46 @@ install:
   - ai_ckeditor
   - key
   - provider_openai
+config:
+  actions:
+    editor.editor.full_html:
+      addItemToToolbar:
+        item_name: aickeditor
+      simpleConfigUpdate:
+        settings.plugins.ai_ckeditor_ai.dialog.autoresize: 'min-width: 600px'
+        settings.plugins.ai_ckeditor_ai.dialog.height: '750'
+        settings.plugins.ai_ckeditor_ai.dialog.width: '900'
+        settings.plugins.ai_ckeditor_ai.dialog.dialog_class: ai-ckeditor-modal
+        settings.plugins.ai_ckeditor_ai.plugins.ai_ckeditor_completion.provider: openai__gpt-4o
+        settings.plugins.ai_ckeditor_ai.plugins.ai_ckeditor_completion.enabled: true
+        settings.plugins.ai_ckeditor_ai.plugins.ai_ckeditor_help.enabled: false
+        settings.plugins.ai_ckeditor_ai.plugins.ai_ckeditor_summarize.provider: openai__gpt-4o
+        settings.plugins.ai_ckeditor_ai.plugins.ai_ckeditor_summarize.enabled: true
+        settings.plugins.ai_ckeditor_ai.plugins.ai_ckeditor_tone.autocreate: false
+        settings.plugins.ai_ckeditor_ai.plugins.ai_ckeditor_tone.provider: openai__gpt-4o
+        settings.plugins.ai_ckeditor_ai.plugins.ai_ckeditor_tone.tone_vocabulary: ai_tones
+        settings.plugins.ai_ckeditor_ai.plugins.ai_ckeditor_tone.use_description: 1
+        settings.plugins.ai_ckeditor_ai.plugins.ai_ckeditor_tone.enabled: true
+        settings.plugins.ai_ckeditor_ai.plugins.ai_ckeditor_translate.autocreate: true
+        settings.plugins.ai_ckeditor_ai.plugins.ai_ckeditor_translate.provider: openai__gpt-4o
+        settings.plugins.ai_ckeditor_ai.plugins.ai_ckeditor_translate.translate_vocabulary: ai_languages
+        settings.plugins.ai_ckeditor_ai.plugins.ai_ckeditor_translate.use_description: false
+        settings.plugins.ai_ckeditor_ai.plugins.ai_ckeditor_translate.enabled: true
+    key.key.openai_provider:
+      createIfNotExists:
+        langcode: en
+        status: true
+        id: openai_provider
+        label: 'OpenAI Provider'
+        description: 'OpenAI key created at https://platform.openai.com'
+        key_type: authentication
+        key_type_settings: {  }
+        key_provider: file
+        key_provider_settings:
+          file_location: 'private://keys/openai_provider.key'
+          strip_line_breaks: true
+        key_input: none
+        key_input_settings: {  }
+    provider_openai.settings:
+      simpleConfigUpdate:
+        api_key: openai_provider
