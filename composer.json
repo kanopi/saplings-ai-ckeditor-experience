@@ -1,7 +1,7 @@
 {
-    "name": "kanopi/ai-ckeditor-experience",
+    "name": "kanopi/saplings-ai-ckeditor-experience",
     "type": "drupal-recipe",
-    "description": "Configures CKEditor for AI translation and content generation.",
+    "description": "Configures CKEditor for integration with OpenAI.",
     "license": "GPL-2.0-or-later",
     "require": {
         "drupal/ai": "*",
