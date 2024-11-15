@@ -1,0 +1,17 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: aa08cbc9-0d7f-42c6-a254-860a68097fae
+  bundle: ai_tones
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'High school teacher'
+  description:
+    -
+      value: "<p>This tone explains complex subjects in clear, plain language. It uses relevant examples and is is best for communicating to a wide range of comprehension levels. If necessary, it is acceptable to replace words with synonyms that are more consistent with this tone.</p>"
+      format: full_html

@@ -1,0 +1,17 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 144c7615-17be-41bd-97d4-b28124e096a3
+  bundle: ai_tones
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Corporate executive'
+  description:
+    -
+      value: "<p>Clear, strategic messaging in a concise, authoritative tone that emphasizes the company’s vision and values. If necessary, it is acceptable to replace words with synonyms that are more consistent with this tone.</p>"
+      format: full_html
