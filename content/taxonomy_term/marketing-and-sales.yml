@@ -1,0 +1,17 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 9ac1a15f-07ec-44af-8768-284db5ad1521
+  bundle: ai_tones
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Marketing and sales'
+  description:
+    -
+      value: "<p>This tone helps sell a product or service by emphasizing its benefits to the readers at every opportunity. It communicates the benefits using clear, direct, simple and compelling language. It ensures the copy answers always this question in the reader's mind: \"Why should I care about this?\" If necessary, it is acceptable to replace words with synonyms that are more consistent with this tone.</p>"
+      format: full_html

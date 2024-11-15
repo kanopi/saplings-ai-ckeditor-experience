@@ -1,0 +1,17 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: ec4c9609-2a51-46c4-b75b-1e4ed7d6c6ed
+  bundle: ai_tones
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Advertising copywriter'
+  description:
+    -
+      value: "<p>This tone uses bold, memorable statements that blend wit and creativity to capture attention and convey the brand’s message in a way that resonates emotionally and leaves a lasting impression. If necessary, it is acceptable to replace words with synonyms that are more consistent with this tone. Use no more than one exclamation point per 1000 words.</p>"
+      format: full_html

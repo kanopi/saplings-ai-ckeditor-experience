@@ -1,0 +1,17 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 945cd966-89ed-4c8c-ae82-f38a928391ea
+  bundle: ai_tones
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Journalist'
+  description:
+    -
+      value: "<p>A direct, factual tone that combines clear storytelling with in-depth analysis, prioritizing accuracy, and empathy. It's focused on delivering factual, well-researched information with clarity and precision, while maintaining an objective tone and providing balanced perspectives to build credibility and trust with your audience. If necessary, it is acceptable to replace words with synonyms that are more consistent with this tone.</p>"
+      format: full_html
