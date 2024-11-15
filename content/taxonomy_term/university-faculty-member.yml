@@ -10,7 +10,7 @@ default:
       value: true
   name:
     -
-      value: 'University facult member'
+      value: 'University faculty member'
   description:
     -
       value: "<p>An inclusive and forward-thinking tone that resonates with faculty, students, and alumni alike. If necessary, it is acceptable to replace words with synonyms that are more consistent with this tone.</p>"
