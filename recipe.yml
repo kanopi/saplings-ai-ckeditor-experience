@@ -1,10 +1,8 @@
 name: 'Saplings - AI CKEditor Experience'
 description: 'Configures CKEditor for AI translation and content generation.'
 type: Editor
-# Uncomment when leniency is added to this core recipe.
-# Currently it fails if the editor has changed at all from the core recipe.
-# recipes:
-#   - core/recipes/full_html_format_editor
+recipes:
+  - core/recipes/full_html_format_editor
 install:
   # Core.
   - ckeditor5
