@@ -12,10 +12,11 @@ install:
   # Contrib.
   - ai
   - ai_ckeditor
+  - ai_provider_openai
   - key
-  - provider_openai
 config:
   actions:
+    # Configure CKEditor.
     editor.editor.full_html:
       addItemToToolbar:
         item_name: aickeditor
@@ -39,6 +40,7 @@ config:
         settings.plugins.ai_ckeditor_ai.plugins.ai_ckeditor_translate.translate_vocabulary: ai_languages
         settings.plugins.ai_ckeditor_ai.plugins.ai_ckeditor_translate.use_description: false
         settings.plugins.ai_ckeditor_ai.plugins.ai_ckeditor_translate.enabled: true
+    # Create the key entity if it does not exist.
     key.key.openai_provider:
       createIfNotExists:
         langcode: en
@@ -54,6 +56,7 @@ config:
           strip_line_breaks: true
         key_input: none
         key_input_settings: {  }
-    provider_openai.settings:
+    # Configure the provider to use the key.
+    ai_provider_openai.settings:
       simpleConfigUpdate:
         api_key: openai_provider
